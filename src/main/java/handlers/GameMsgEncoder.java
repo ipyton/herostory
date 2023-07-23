@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 public class GameMsgEncoder extends ChannelOutboundHandlerAdapter {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgEncoder.class);
 
+    //
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
         if (null == ctx || null == msg) {

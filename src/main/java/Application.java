@@ -43,7 +43,6 @@ public class Application {
             ChannelFuture f = serverBootstrap.bind(12345).sync();
             if (f.isSuccess()) {
                 LOGGER.info("success!");
-
             }
             f.channel().closeFuture().sync();
         }

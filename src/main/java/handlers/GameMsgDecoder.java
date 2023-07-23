@@ -1,13 +1,13 @@
 package handlers;
 
-import com.google.protobuf.GeneratedMessageV3;
+import com.google.protobuf.Message;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
-import message.GameMsgProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.GameMessageRecognizer;
 
 public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgDecoder.class);
@@ -24,23 +24,19 @@ public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
             BinaryWebSocketFrame inputFrame = (BinaryWebSocketFrame) msg;
             ByteBuf byteBuf = inputFrame.content();
 
-            byteBuf.readShort();
+            byteBuf.readShort();//读取消息长度
             int msgCode = byteBuf.readShort();
 
             byte[] msgBody = new byte[byteBuf.readableBytes()];
             byteBuf.readBytes(msgBody);
 
-            GeneratedMessageV3 cmd = null;
-            switch (msgCode) {
-                case GameMsgProtocol.MsgCode.USER_ENTRY_CMD_VALUE:
-                    cmd = GameMsgProtocol.UserEntryCmd.parseFrom(msgBody);
-                    break;
-                case GameMsgProtocol.MsgCode.WHO_ELSE_IS_HERE_CMD_VALUE:
-                    cmd = GameMsgProtocol.WhoElseIsHereCmd.parseFrom(msgBody);
-                    break;
-                default:
-                    break;
-            }
+            //消息构造器
+            Message.Builder builder = GameMessageRecognizer.getBuilderByMsgCode(msgCode);
+            builder.clear();
+            builder.mergeFrom(msgBody);
+
+            //构造消息实体
+            Message cmd = builder.build();
 
             if (null != cmd) {
                 ctx.fireChannelRead(cmd);

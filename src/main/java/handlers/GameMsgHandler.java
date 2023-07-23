@@ -1,26 +1,19 @@
 package handlers;
 
-import handlers.Entities.User;
-import io.netty.buffer.ByteBuf;
+import com.google.protobuf.GeneratedMessageV3;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.channel.group.ChannelGroup;
-import io.netty.channel.group.DefaultChannelGroup;
-import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
-import io.netty.util.concurrent.GlobalEventExecutor;
+import io.netty.util.AttributeKey;
 import message.GameMsgProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.HashMap;
-import java.util.Map;
+import utils.BroadCaster;
+import utils.CmdHandlerFactory;
+import Entities.UserManager;
+import utils.MainMsgProcessor;
 
 public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgDecoder.class);
-
-    static private final ChannelGroup _channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
-
-    static private final Map<Integer, User> _userMap = new HashMap<>();
 
 
     @Override
@@ -31,57 +24,58 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
 
         try {
             super.channelActive(ctx);
-            _channelGroup.add(ctx.channel());
+            BroadCaster.addChannel(ctx.channel());
         } catch (Exception ex) {
             LOGGER.error(ex.getMessage(), ex);
         }
     }
 
     @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        if (ctx == null) return;
+        try {
+            super.handlerRemoved(ctx);
+            Integer userID = (Integer) ctx.channel().attr(AttributeKey.valueOf("userID")).get();
+            if (null == userID) return;
+            UserManager.removeByUserId(userID);
+            BroadCaster.removeChannel(ctx.channel());
+
+            GameMsgProtocol.UserQuitResult.Builder builder = GameMsgProtocol.UserQuitResult.newBuilder();
+            builder.setQuitUserId(userID);
+
+            GameMsgProtocol.UserQuitResult result = builder.build();
+            BroadCaster.broadcast(result);
+
+        } catch (Exception ex) {
+            LOGGER.error(ex.getMessage(), ex);
+        }
+    }
+
+    //previous version handler and
+    @Override
     protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (null == ctx || null == msg) {
             return;
         }
 
-        LOGGER.info(msg.getClass().getSimpleName(),msg);
-        try {
-          if (msg instanceof GameMsgProtocol.UserEntryCmd) {
-              GameMsgProtocol.UserEntryCmd cmd = (GameMsgProtocol.UserEntryCmd) msg;
-              int userID = cmd.getUserId();
-              String heroAvatar = cmd.getHeroAvatar();
-
-              User newUser = new User();
-              newUser.userID = userID;
-              newUser.heroAvatar = heroAvatar;
-              _userMap.putIfAbsent(userID, newUser);
-
-              GameMsgProtocol.UserEntryResult.Builder resultBuilder = GameMsgProtocol.UserEntryResult.newBuilder();
-              resultBuilder.setUserId(userID);
-              resultBuilder.setHeroAvatar(heroAvatar);
-
-              GameMsgProtocol.UserEntryResult newResult = resultBuilder.build();
-              _channelGroup.writeAndFlush(newResult);
-          } else if (msg instanceof GameMsgProtocol.WhoElseIsHereCmd) {
-              GameMsgProtocol.WhoElseIsHereResult.Builder resultBuilder = GameMsgProtocol.WhoElseIsHereResult.newBuilder();
-
-              for (User currUser: _userMap.values()) {
-                    if (null == currUser) {
-                        continue;
-                    }
-
-                    GameMsgProtocol.WhoElseIsHereResult.UserInfo.Builder userInfoBuilder = GameMsgProtocol.WhoElseIsHereResult.UserInfo.newBuilder();
-                    userInfoBuilder.setUserId(currUser.userID);
-                    userInfoBuilder.setHeroAvatar(currUser.heroAvatar);
-                    resultBuilder.addUserInfo(userInfoBuilder);
-              }
-              GameMsgProtocol.WhoElseIsHereResult newResult = resultBuilder.build();
-              ctx.writeAndFlush(newResult);
-          }
-
-        } catch (Exception ex) {
-            LOGGER.error(ex.getMessage(), ex);
+//        LOGGER.info(msg.getClass().getSimpleName(),msg);
+//        try {
+//            ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msg.getClass());
+//
+//            if(null != cmdHandler) {
+//                cmdHandler.handle(ctx, cast(msg));
+//            }
+//        } catch (Exception ex) {
+//            LOGGER.error(ex.getMessage(), ex);
+//        }
+        MainMsgProcessor.getInstance().process(ctx, msg);
+    }
+    // the first T stands for type of T, the second T means return T
+    static private <T extends GeneratedMessageV3> T cast(Object msg){
+        if (null == msg) {
+            return null;
+        } else {
+            return (T) msg;
         }
-
-
     }
 }
