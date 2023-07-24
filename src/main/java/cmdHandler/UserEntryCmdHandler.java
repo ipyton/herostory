@@ -1,4 +1,4 @@
-package handlers;
+package cmdHandler;
 
 import entities.User;
 import io.netty.channel.ChannelHandlerContext;

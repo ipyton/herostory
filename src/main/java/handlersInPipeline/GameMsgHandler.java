@@ -1,4 +1,4 @@
-package handlers;
+package handlersInPipeline;
 
 import com.google.protobuf.GeneratedMessageV3;
 import io.netty.channel.ChannelHandlerContext;
@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.BroadCaster;
 import entities.UserManager;
-import utils.MainMsgProcessor;
+import utils.MainThreadProcessor;
 
 public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgDecoder.class);
@@ -67,7 +67,7 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
 //        } catch (Exception ex) {
 //            LOGGER.error(ex.getMessage(), ex);
 //        }
-        MainMsgProcessor.getInstance().process(ctx, msg);
+        MainThreadProcessor.getInstance().process(ctx, msg);
     }
     // the first T stands for type of T, the second T means return T
     static private <T extends GeneratedMessageV3> T cast(Object msg){

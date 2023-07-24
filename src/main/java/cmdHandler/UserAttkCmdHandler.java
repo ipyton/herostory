@@ -1,4 +1,4 @@
-package handlers;
+package cmdHandler;
 
 import entities.User;
 import entities.UserManager;
@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.BroadCaster;
 
-public class UserAttkCmdHandler implements ICmdHandler<GameMsgProtocol.UserAttkCmd>{
+public class UserAttkCmdHandler implements ICmdHandler<GameMsgProtocol.UserAttkCmd> {
 
 
     static private final Logger LOGGER = LoggerFactory.getLogger(UserAttkCmdHandler.class);

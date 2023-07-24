@@ -1,4 +1,4 @@
-package handlers;
+package cmdHandler;
 
 import com.google.protobuf.GeneratedMessageV3;
 import io.netty.channel.ChannelHandlerContext;

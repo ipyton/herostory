@@ -1,6 +1,7 @@
 package loginService;
 
-import entities.MySQLFactory;
+import async.IAsyncOperation;
+import utils.MySQLFactory;
 import loginService.DB.AccountInformation;
 import loginService.DB.IUserDAO;
 import org.apache.ibatis.session.SqlSession;
@@ -8,7 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+//Login Service uses an  asynchronous and multiThread method to handle the problems. Because DB operation will block the
+// single thread operation.
 
+@Deprecated
 public class LoginService {
     static private final Logger LOGGER = LoggerFactory.getLogger(LoginService.class);
 
@@ -49,5 +53,7 @@ public class LoginService {
             return null;
         }
     }
+
+
 
 }

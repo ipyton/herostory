@@ -1,4 +1,4 @@
-package handlers;
+package cmdHandler;
 
 import entities.User;
 import entities.UserManager;
@@ -35,6 +35,8 @@ public class UserMoveToCmdHandler implements ICmdHandler<GameMsgProtocol.UserMov
         builder.setMoveFromPosX(cmd.getMoveToPosX());
         builder.setMoveFromPosY(cmd.getMoveToPosY());
         builder.setMoveStartTime(nowTime);
+
+        //build the result and broadcast
         GameMsgProtocol.UserMoveToResult newResult = builder.build();
         BroadCaster.broadcast(newResult);
     }

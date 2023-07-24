@@ -1,4 +1,4 @@
-package handlers;
+package cmdHandler;
 
 import entities.User;
 import io.netty.channel.ChannelHandlerContext;
@@ -9,7 +9,7 @@ import message.*;
 import java.util.Collection;
 
 //it contains movement information to show the movement of others when querying.
-public class WhoElseIsHereCmdHandler implements ICmdHandler<GameMsgProtocol.WhoElseIsHereCmd>{
+public class WhoElseIsHereCmdHandler implements ICmdHandler<GameMsgProtocol.WhoElseIsHereCmd> {
 
     @Override
     public void handle(ChannelHandlerContext ctx, GameMsgProtocol.WhoElseIsHereCmd cmd) {
@@ -39,7 +39,6 @@ public class WhoElseIsHereCmdHandler implements ICmdHandler<GameMsgProtocol.WhoE
             mvStateBuilder.setToPosX(currUser.state.toX);
             mvStateBuilder.setToPosY(currUser.state.toY);
             mvStateBuilder.setStartTime(currUser.state.startTime);
-
             builder.setMoveState(mvStateBuilder);
             resultBuilder.addUserInfo(builder);
         }
