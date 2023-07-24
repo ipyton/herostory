@@ -1,8 +1,8 @@
 package handlers;
 
-import Entities.User;
+import entities.User;
 import io.netty.channel.ChannelHandlerContext;
-import Entities.UserManager;
+import entities.UserManager;
 
 import message.*;
 

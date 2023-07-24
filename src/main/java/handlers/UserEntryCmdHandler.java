@@ -1,12 +1,11 @@
 package handlers;
 
-import Entities.User;
+import entities.User;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
-import loginService.DB.AccountInformation;
 import message.GameMsgProtocol;
 import utils.BroadCaster;
-import Entities.UserManager;
+import entities.UserManager;
 
 
 // Handle the new user information

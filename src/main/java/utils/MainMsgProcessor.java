@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-//This is a singleton
+//This is a single thread processor which is called by different handlers.
 public final class MainMsgProcessor {
     static private final Logger LOGGER = LoggerFactory.getLogger(MainMsgProcessor.class);
     static private final MainMsgProcessor _instance = new MainMsgProcessor();
@@ -18,7 +18,7 @@ public final class MainMsgProcessor {
     private final ExecutorService _es = Executors.newSingleThreadExecutor(
             (newRunnable) -> {
                 Thread newThread = new Thread(newRunnable);
-                newThread.setName("MainMsgProcessor");
+                newThread.setName("MainThreadProcessor");
                 return newThread;
             }
     );
@@ -36,7 +36,7 @@ public final class MainMsgProcessor {
         LOGGER.info("msgClass={}, msgObj = {}", msgClass.getSimpleName(), msg);
         _es.submit(()-> {
             try{
-                ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msgClass);
+                ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msgClass);//return a handler by class
                 if (null != cmdHandler) {
                     cmdHandler.handle(ctx, cast(msg));
                 }

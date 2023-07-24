@@ -1,10 +1,5 @@
-package Entities;
+package entities;
 
-import Entities.User;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
-
-import javax.jws.soap.SOAPBinding;
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

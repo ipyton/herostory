@@ -1,4 +1,4 @@
-package Entities;
+package entities;
 
 public class MoveState {
     public float fromX, fromY, toX, toY;

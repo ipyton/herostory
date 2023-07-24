@@ -1,4 +1,4 @@
-package Entities;
+package entities;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

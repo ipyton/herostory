@@ -8,8 +8,7 @@ import message.GameMsgProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.BroadCaster;
-import utils.CmdHandlerFactory;
-import Entities.UserManager;
+import entities.UserManager;
 import utils.MainMsgProcessor;
 
 public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {

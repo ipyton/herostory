@@ -10,16 +10,17 @@ import message.GameMsgProtocol;
 import java.util.HashMap;
 import java.util.Map;
 
+
+//class () <-> object (handler to process specific class)
 public class CmdHandlerFactory {
 
     static private Map<Class<?>, ICmdHandler<? extends GeneratedMessageV3>> _handlerMap = new HashMap<>();
 
     private CmdHandlerFactory(){}
 
+
     static public void init() {
-        _handlerMap.put(GameMsgProtocol.UserEntryCmd.class, new UserEntryCmdHandler());
-        _handlerMap.put(GameMsgProtocol.WhoElseIsHereCmd.class, new WhoElseIsHereCmdHandler());
-        _handlerMap.put(GameMsgProtocol.UserMoveToCmd.class, new UserMoveToCmdHandler());
+
 
     }
 

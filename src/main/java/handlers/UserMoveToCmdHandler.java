@@ -1,7 +1,7 @@
 package handlers;
 
-import Entities.User;
-import Entities.UserManager;
+import entities.User;
+import entities.UserManager;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 import message.GameMsgProtocol;

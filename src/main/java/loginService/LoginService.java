@@ -1,9 +1,8 @@
 package loginService;
 
-import Entities.MySQLFactory;
+import entities.MySQLFactory;
 import loginService.DB.AccountInformation;
 import loginService.DB.IUserDAO;
-import org.apache.ibatis.executor.ExecutorException;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
