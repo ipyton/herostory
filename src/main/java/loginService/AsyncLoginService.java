@@ -2,13 +2,16 @@ package loginService;
 
 import async.AsyncOperationProcessor;
 import async.IAsyncOperation;
+import com.alibaba.fastjson.JSONObject;
 import com.mysql.cj.log.Log;
 import loginService.DB.AccountInformation;
 import loginService.DB.IUserDAO;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import redis.clients.jedis.Jedis;
 import utils.MySQLFactory;
+import utils.RedisUtil;
 
 import java.util.function.Function;
 
@@ -42,6 +45,18 @@ public class AsyncLoginService {
 
 
 
+    }
+
+    private void updateBasicInfoInRedis(AccountInformation information){
+        if(null == information) return;
+        try (Jedis redis = RedisUtil.getJedis()){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("userName", information.userName);
+            jsonObject.put("heroAvatar", information.heroAvatar);
+            redis.hset("User_" + information.userID, "BasicInfo", jsonObject.toJSONString());
+        } catch (Exception ex) {
+            LOGGER.error(ex.getMessage(), ex);
+        }
     }
 
 
@@ -87,6 +102,7 @@ public class AsyncLoginService {
                     information.heroAvatar = "Hero_Shaman";
                     dao.insertInto(information);
                 }
+                AsyncLoginService.getInstance().updateBasicInfoInRedis(information);
                 _information = information;
             } catch (Exception ex) {
                 LOGGER.error(ex.getMessage(), ex);

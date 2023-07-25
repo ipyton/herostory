@@ -24,6 +24,7 @@ public class UserLoginCmdHandler implements ICmdHandler<GameMsgProtocol.UserLogi
 
         if (null == userName || null == password) return;
 
+        //if there are no user information before, just create a new account with default information.
         AsyncLoginService.getInstance().userLogin(userName, password, (account)->{
             GameMsgProtocol.UserLoginResult.Builder resultBuilder = GameMsgProtocol.UserLoginResult.newBuilder();
 
