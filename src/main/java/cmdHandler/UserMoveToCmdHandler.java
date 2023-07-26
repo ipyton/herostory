@@ -30,10 +30,11 @@ public class UserMoveToCmdHandler implements ICmdHandler<GameMsgProtocol.UserMov
 
         GameMsgProtocol.UserMoveToResult.Builder builder = GameMsgProtocol.UserMoveToResult.newBuilder();
         builder.setMoveUserId(userID);
+
         builder.setMoveToPosX(cmd.getMoveToPosX());
         builder.setMoveToPosY(cmd.getMoveToPosY());
-        builder.setMoveFromPosX(cmd.getMoveToPosX());
-        builder.setMoveFromPosY(cmd.getMoveToPosY());
+        builder.setMoveFromPosX(cmd.getMoveFromPosX());
+        builder.setMoveFromPosY(cmd.getMoveFromPosY());
         builder.setMoveStartTime(nowTime);
 
         //build the result and broadcast

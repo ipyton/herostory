@@ -34,16 +34,16 @@ public class UserLoginCmdHandler implements ICmdHandler<GameMsgProtocol.UserLogi
                 resultBuilder.setHeroAvatar("");
             } else {
                 User newUser = new User();
-                newUser.userID = account.userID;
+                newUser.userID = account.userId;
                 newUser.userName = account.userName;
                 newUser.heroAvatar = account.heroAvatar;
                 newUser.currHP = 100;
 
                 UserManager.addUser(newUser);
 
-                ctx.channel().attr(AttributeKey.valueOf("userID")).set(newUser.userID);
+                ctx.channel().attr(AttributeKey.valueOf("userId")).set(newUser.userID);
 
-                resultBuilder.setUserId(account.userID);
+                resultBuilder.setUserId(account.userId);
                 resultBuilder.setUserName(account.userName);
                 resultBuilder.setHeroAvatar(account.heroAvatar);
             }

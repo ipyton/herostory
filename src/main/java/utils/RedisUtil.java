@@ -27,7 +27,7 @@ public class RedisUtil {
             throw new RuntimeException("redis haven't been init()");
         }
         Jedis jedis = _jedisPool.getResource();
-        jedis.auth("root");
+        jedis.auth("123456");
 
         return jedis;
     }

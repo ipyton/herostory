@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.GameMessageRecognizer;
 
+//this class has potential bugs
 public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgDecoder.class);
 
@@ -24,19 +25,23 @@ public class GameMsgDecoder extends ChannelInboundHandlerAdapter {
             BinaryWebSocketFrame inputFrame = (BinaryWebSocketFrame) msg;
             ByteBuf byteBuf = inputFrame.content();
 
-            byteBuf.readShort();//读取消息长度
+            int kkk = byteBuf.readShort();//读取消息长度
+            //LOGGER.error(kkk+ " ---------------bdsifgubaesrilugbaeswrg");
             int msgCode = byteBuf.readShort();
-
-            byte[] msgBody = new byte[byteBuf.readableBytes()];
+            //LOGGER.error(msgCode+ "-- " + byteBuf.writerIndex() + "--" + byteBuf.readerIndex());
+            byte[] msgBody = new byte[byteBuf.readableBytes()]; // this place will cause bug
             byteBuf.readBytes(msgBody);
 
             //消息构造器
             Message.Builder builder = GameMessageRecognizer.getBuilderByMsgCode(msgCode);
             builder.clear();
             builder.mergeFrom(msgBody);
+            //System.out.println(msgBody);
 
             //构造消息实体
             Message cmd = builder.build();
+
+            System.out.println(cmd);
 
             if (null != cmd) {
                 ctx.fireChannelRead(cmd);

@@ -1,9 +1,8 @@
 package loginService;
 
-import async.IAsyncOperation;
 import utils.MySQLFactory;
 import loginService.DB.AccountInformation;
-import loginService.DB.IUserDAO;
+import loginService.DB.IUserDao;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +29,7 @@ public class LoginService {
             return null;
         }
         try (SqlSession session = MySQLFactory.openSession()) {
-            IUserDAO dao = session.getMapper(IUserDAO.class);
+            IUserDao dao = session.getMapper(IUserDao.class);
 
             AccountInformation account = dao.getByUserName(userName);
 

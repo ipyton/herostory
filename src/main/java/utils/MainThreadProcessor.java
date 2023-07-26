@@ -42,11 +42,13 @@ public class MainThreadProcessor {
         if (null == ctx || null == msg) return;
         final Class<?> msgClass = msg.getClass();
 
-        LOGGER.info("get information from users msgClass = {}, msgObject = {}", msgClass.getSimpleName(), msg);
 
+
+        LOGGER.info("get information from users msgClass = {}, msgObject = {}", msgClass.getSimpleName(), msg);
         _es.submit(()->{
            try {
                ICmdHandler<? extends GeneratedMessageV3> cmdHandler = CmdHandlerFactory.create(msgClass);
+               LOGGER.warn(String.valueOf(cmdHandler.getClass()));
                if (null != cmdHandler) cmdHandler.handle(ctx, cast(msg));
            } catch (Exception ex) {
                 LOGGER.error(ex.getMessage(), ex);

@@ -1,5 +1,7 @@
 
 
+import cmdHandler.CmdHandlerFactory;
+import com.sun.corba.se.impl.activation.ServerMain;
 import handlersInPipeline.GameMsgDecoder;
 import handlersInPipeline.GameMsgEncoder;
 import handlersInPipeline.GameMsgHandler;
@@ -12,14 +14,20 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
+import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.GameMessageRecognizer;
+import utils.MySQLFactory;
+import utils.RedisUtil;
 
 public class Application {
 
     static private final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
+        PropertyConfigurator.configure( Application.class.getResource("log4j.properties"));
+        init();
         NioEventLoopGroup boss = new NioEventLoopGroup();
         NioEventLoopGroup worker = new NioEventLoopGroup();
 
@@ -29,8 +37,8 @@ public class Application {
         serverBootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
-                ch.pipeline().addLast(new HttpServerCodec(),
-                new HttpObjectAggregator(65535),
+                ch.pipeline().addLast(new HttpServerCodec(), // handle get method
+                new HttpObjectAggregator(65535), // handle the post method
                 new WebSocketServerProtocolHandler("/websocket"), //处理握手信息
                 new GameMsgEncoder(),
                 new GameMsgDecoder(),
@@ -53,5 +61,13 @@ public class Application {
             worker.shutdownGracefully();
         }
 
+    }
+
+    public static void init(){
+        RedisUtil.init();
+        GameMessageRecognizer.init();
+        MySQLFactory.init();
+        CmdHandlerFactory.init();
+        System.out.println("init done!!!");
     }
 }

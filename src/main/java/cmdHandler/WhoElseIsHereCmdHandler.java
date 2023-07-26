@@ -28,6 +28,7 @@ public class WhoElseIsHereCmdHandler implements ICmdHandler<GameMsgProtocol.WhoE
             GameMsgProtocol.WhoElseIsHereResult.UserInfo.Builder builder = GameMsgProtocol.WhoElseIsHereResult.
                     UserInfo.newBuilder();
             builder.setUserId(currUser.userID);
+            builder.setUserName(currUser.userName);
             builder.setHeroAvatar(currUser.heroAvatar);
 
 

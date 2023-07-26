@@ -1,6 +1,6 @@
 package loginService.DB;
 
-public interface IUserDAO {
+public interface IUserDao {
 
     AccountInformation getByUserName(String userName);
 

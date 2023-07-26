@@ -62,6 +62,15 @@ public final class GameMessageRecognizer {
                     continue;
                 }
 
+                // 获取消息编码
+                String strMsgCode = msgCode.name();
+                strMsgCode = strMsgCode.replaceAll("_", "");
+                strMsgCode = strMsgCode.toLowerCase();
+
+                if (!strMsgCode.startsWith(className)) {
+                    continue;
+                }
+
                 try {
                     Object returnObj = innerClass.getDeclaredMethod("getDefaultInstance").invoke(innerClass);
                     LOGGER.info("{} <----> {}", innerClass.getName(), msgCode.getNumber());

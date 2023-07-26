@@ -1,0 +1,421 @@
+[23:30:49,388] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:30:49,392] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:30:49,394] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:30:49,396] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:30:49,400] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:30:49,402] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:30:49,404] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:30:49,406] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:30:49,408] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:30:49,410] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:30:49,412] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:30:49,414] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:30:49,416] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:30:49,418] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:30:49,420] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:30:49,424] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:30:49,427] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:30:49,429] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:30:49,431] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:30:49,434] [ERROR] MySQLFactory.init --> Could not find resource MyBatisConfig.xml
+java.io.IOException: Could not find resource MyBatisConfig.xml
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:114)
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:100)
+	at utils.MySQLFactory.init(MySQLFactory.java:21)
+	at Application.init(Application.java:68)
+	at Application.main(Application.java:30)
+[23:30:49,485] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:30:49,485] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:30:49,486] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:30:49,486] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:30:49,486] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:30:49,486] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:30:49,638] [INFO] Application.main --> success!
+[23:33:54,879] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:33:54,882] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:33:54,884] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:33:54,886] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:33:54,890] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:33:54,892] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:33:54,894] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:33:54,895] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:33:54,897] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:33:54,899] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:33:54,901] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:33:54,903] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:33:54,905] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:33:54,907] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:33:54,909] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:33:54,912] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:33:54,915] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:33:54,917] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:33:54,919] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:33:54,922] [ERROR] MySQLFactory.init --> Could not find resource MyBatisConfig.xml
+java.io.IOException: Could not find resource MyBatisConfig.xml
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:114)
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:100)
+	at utils.MySQLFactory.init(MySQLFactory.java:21)
+	at Application.init(Application.java:68)
+	at Application.main(Application.java:30)
+[23:33:54,974] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:33:54,975] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:33:54,975] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:33:54,975] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:33:54,975] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:33:54,976] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:33:55,166] [INFO] Application.main --> success!
+[23:36:06,811] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:36:06,815] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:36:06,817] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:36:06,820] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:36:06,824] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:36:06,827] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:36:06,829] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:36:06,831] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:36:06,834] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:36:06,837] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:36:06,839] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:36:06,841] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:36:06,844] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:36:06,846] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:36:06,849] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:36:06,852] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:36:06,856] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:36:06,858] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:36:06,860] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:36:07,058] [ERROR] MySQLFactory.init --> 
+### Error building SqlSession.
+### The error may exist in org/tinygame/herostory/login/db/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in org/tinygame/herostory/login/db/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at utils.MySQLFactory.init(MySQLFactory.java:20)
+	at Application.init(Application.java:68)
+	at Application.main(Application.java:30)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:98)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 4 more
+Caused by: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:114)
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:100)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:372)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 6 more
+[23:36:07,069] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:36:07,070] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:36:07,070] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:36:07,070] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:36:07,070] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:36:07,070] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:36:07,221] [INFO] Application.main --> success!
+[23:36:40,277] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:36:40,280] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:36:40,282] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:36:40,283] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:36:40,287] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:36:40,288] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:36:40,289] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:36:40,291] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:36:40,292] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:36:40,293] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:36:40,295] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:36:40,296] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:36:40,297] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:36:40,299] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:36:40,300] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:36:40,302] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:36:40,304] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:36:40,306] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:36:40,307] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:36:40,480] [ERROR] MySQLFactory.init --> 
+### Error building SqlSession.
+### The error may exist in org/tinygame/herostory/login/db/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in org/tinygame/herostory/login/db/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at utils.MySQLFactory.init(MySQLFactory.java:20)
+	at Application.init(Application.java:67)
+	at Application.main(Application.java:29)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:98)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 4 more
+Caused by: java.io.IOException: Could not find resource org/tinygame/herostory/login/db/IUserDao.xml
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:114)
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:100)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:372)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 6 more
+[23:36:40,486] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:36:40,487] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:36:40,487] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:36:40,487] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:36:40,487] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:36:40,488] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:36:40,646] [INFO] Application.main --> success!
+[23:38:54,141] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:38:54,144] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:38:54,147] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:38:54,149] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:38:54,152] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:38:54,154] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:38:54,156] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:38:54,158] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:38:54,160] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:38:54,161] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:38:54,164] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:38:54,165] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:38:54,167] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:38:54,169] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:38:54,171] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:38:54,175] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:38:54,178] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:38:54,180] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:38:54,182] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:38:54,373] [ERROR] MySQLFactory.init --> 
+### Error building SqlSession.
+### The error may exist in loginService/DB/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource loginService/DB/IUserDao.xml
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in loginService/DB/IUserDao.xml
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource loginService/DB/IUserDao.xml
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at utils.MySQLFactory.init(MySQLFactory.java:20)
+	at Application.init(Application.java:67)
+	at Application.main(Application.java:29)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.io.IOException: Could not find resource loginService/DB/IUserDao.xml
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:98)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 4 more
+Caused by: java.io.IOException: Could not find resource loginService/DB/IUserDao.xml
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:114)
+	at org.apache.ibatis.io.Resources.getResourceAsStream(Resources.java:100)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:372)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:119)
+	... 6 more
+[23:38:54,384] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:38:54,385] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:38:54,385] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:38:54,386] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:38:54,386] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:38:54,386] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:38:54,566] [INFO] Application.main --> success!
+[23:41:58,103] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:41:58,108] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:41:58,110] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:41:58,112] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:41:58,116] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:41:58,118] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:41:58,120] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:41:58,122] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:41:58,124] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:41:58,126] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:41:58,128] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:41:58,130] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:41:58,131] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:41:58,133] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:41:58,135] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:41:58,139] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:41:58,141] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:41:58,143] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:41:58,145] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:44:14,637] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:44:14,642] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:44:14,644] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:44:14,647] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:44:14,650] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:44:14,652] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:44:14,655] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:44:14,656] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:44:14,658] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:44:14,660] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:44:14,662] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:44:14,664] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:44:14,666] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:44:14,668] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:44:14,669] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:44:14,672] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:44:14,675] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:44:14,677] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:44:14,679] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:44:15,416] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:44:15,416] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:44:15,416] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:44:15,417] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:44:15,417] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:44:15,417] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:44:15,564] [INFO] Application.main --> success!
+[23:44:35,354] [ERROR] AsyncLoginService$AsyncGetUserEntity.doAsync --> 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: Could not set property 'userId' of 'class loginService.DB.AccountInformation' with value '1' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+### The error may exist in loginService/DB/IUserDao.xml
+### The error may involve loginService.DB.IUserDao.getByUserName
+### The error occurred while handling results
+### SQL: SELECT user_id, user_name, `password`, hero_avatar FROM t_user WHERE user_name = ?;
+### Cause: org.apache.ibatis.reflection.ReflectionException: Could not set property 'userId' of 'class loginService.DB.AccountInformation' with value '1' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.apache.ibatis.reflection.ReflectionException: Could not set property 'userId' of 'class loginService.DB.AccountInformation' with value '1' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+### The error may exist in loginService/DB/IUserDao.xml
+### The error may involve loginService.DB.IUserDao.getByUserName
+### The error occurred while handling results
+### SQL: SELECT user_id, user_name, `password`, hero_avatar FROM t_user WHERE user_name = ?;
+### Cause: org.apache.ibatis.reflection.ReflectionException: Could not set property 'userId' of 'class loginService.DB.AccountInformation' with value '1' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93)
+	at com.sun.proxy.$Proxy6.getByUserName(Unknown Source)
+	at loginService.AsyncLoginService$AsyncGetUserEntity.doAsync(AsyncLoginService.java:91)
+	at async.AsyncOperationProcessor.lambda$process$1(AsyncOperationProcessor.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.reflection.ReflectionException: Could not set property 'userId' of 'class loginService.DB.AccountInformation' with value '1' Cause: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.setBeanProperty(BeanWrapper.java:185)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.set(BeanWrapper.java:59)
+	at org.apache.ibatis.reflection.MetaObject.setValue(MetaObject.java:140)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyPropertyMappings(DefaultResultSetHandler.java:455)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:404)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:354)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:328)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	... 12 more
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no setter for property named 'userId' in 'class loginService.DB.AccountInformation'
+	at org.apache.ibatis.reflection.Reflector.getSetInvoker(Reflector.java:365)
+	at org.apache.ibatis.reflection.MetaClass.getSetInvoker(MetaClass.java:167)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.setBeanProperty(BeanWrapper.java:177)
+	... 28 more
+[23:44:35,359] [ERROR] GameMsgEncoder.write --> UserLoginResult
+[23:46:18,403] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:46:18,407] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:46:18,410] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:46:18,412] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:46:18,416] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:46:18,418] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:46:18,420] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:46:18,422] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:46:18,424] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:46:18,426] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:46:18,428] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:46:18,430] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:46:18,432] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:46:18,435] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:46:18,437] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:46:18,440] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:46:18,443] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:46:18,446] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:46:18,447] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:46:19,261] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:46:19,261] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:46:19,261] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:46:19,261] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:46:19,262] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:46:19,262] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:46:19,475] [INFO] Application.main --> success!
+[23:46:25,416] [ERROR] AsyncLoginService.updateBasicInfoInRedis --> redis haven't been init()
+java.lang.RuntimeException: redis haven't been init()
+	at utils.RedisUtil.getJedis(RedisUtil.java:27)
+	at loginService.AsyncLoginService.updateBasicInfoInRedis(AsyncLoginService.java:51)
+	at loginService.AsyncLoginService.access$000(AsyncLoginService.java:17)
+	at loginService.AsyncLoginService$AsyncGetUserEntity.doAsync(AsyncLoginService.java:104)
+	at async.AsyncOperationProcessor.lambda$process$1(AsyncOperationProcessor.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[23:46:25,421] [ERROR] GameMsgEncoder.write --> UserLoginResult
+[23:47:25,544] [ERROR] AsyncLoginService.updateBasicInfoInRedis --> redis haven't been init()
+java.lang.RuntimeException: redis haven't been init()
+	at utils.RedisUtil.getJedis(RedisUtil.java:27)
+	at loginService.AsyncLoginService.updateBasicInfoInRedis(AsyncLoginService.java:51)
+	at loginService.AsyncLoginService.access$000(AsyncLoginService.java:17)
+	at loginService.AsyncLoginService$AsyncGetUserEntity.doAsync(AsyncLoginService.java:104)
+	at async.AsyncOperationProcessor.lambda$process$1(AsyncOperationProcessor.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[23:47:25,545] [ERROR] GameMsgEncoder.write --> UserLoginResult
+[23:48:55,095] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankResult <----> 18
+[23:48:55,101] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$GetRankCmd <----> 17
+[23:48:55,103] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroResult <----> 16
+[23:48:55,106] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$SelectHeroCmd <----> 15
+[23:48:55,110] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginResult <----> 14
+[23:48:55,112] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserLoginCmd <----> 13
+[23:48:55,114] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserDieResult <----> 12
+[23:48:55,117] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserSubtractHpResult <----> 11
+[23:48:55,119] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkResult <----> 10
+[23:48:55,121] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserAttkCmd <----> 9
+[23:48:55,123] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopResult <----> 8
+[23:48:55,125] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserStopCmd <----> 7
+[23:48:55,127] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserQuitResult <----> 6
+[23:48:55,130] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToResult <----> 5
+[23:48:55,132] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserMoveToCmd <----> 4
+[23:48:55,136] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereResult <----> 3
+[23:48:55,139] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$WhoElseIsHereCmd <----> 2
+[23:48:55,141] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryResult <----> 1
+[23:48:55,143] [INFO] GameMessageRecognizer.init --> message.GameMsgProtocol$UserEntryCmd <----> 0
+[23:48:55,885] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$WhoElseIsHereCmd <-> cmdHandler.WhoElseIsHereCmdHandler
+[23:48:55,886] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserEntryCmd <-> cmdHandler.UserEntryCmdHandler
+[23:48:55,886] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserAttkCmd <-> cmdHandler.UserAttkCmdHandler
+[23:48:55,886] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$GetRankCmd <-> cmdHandler.GetRankCmdHandler
+[23:48:55,886] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserLoginCmd <-> cmdHandler.UserLoginCmdHandler
+[23:48:55,886] [INFO] CmdHandlerFactory.init --> message.GameMsgProtocol$UserMoveToCmd <-> cmdHandler.UserMoveToCmdHandler
+[23:48:56,065] [INFO] Application.main --> success!
+[23:49:09,300] [ERROR] AsyncLoginService.updateBasicInfoInRedis --> redis haven't been init()
+java.lang.RuntimeException: redis haven't been init()
+	at utils.RedisUtil.getJedis(RedisUtil.java:27)
+	at loginService.AsyncLoginService.updateBasicInfoInRedis(AsyncLoginService.java:51)
+	at loginService.AsyncLoginService.access$000(AsyncLoginService.java:17)
+	at loginService.AsyncLoginService$AsyncGetUserEntity.doAsync(AsyncLoginService.java:104)
+	at async.AsyncOperationProcessor.lambda$process$1(AsyncOperationProcessor.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[23:49:09,305] [ERROR] GameMsgEncoder.write --> UserLoginResult
+[23:51:51,530] [ERROR] AsyncLoginService.updateBasicInfoInRedis --> redis haven't been init()
+java.lang.RuntimeException: redis haven't been init()
+	at utils.RedisUtil.getJedis(RedisUtil.java:27)
+	at loginService.AsyncLoginService.updateBasicInfoInRedis(AsyncLoginService.java:51)
+	at loginService.AsyncLoginService.access$000(AsyncLoginService.java:17)
+	at loginService.AsyncLoginService$AsyncGetUserEntity.doAsync(AsyncLoginService.java:104)
+	at async.AsyncOperationProcessor.lambda$process$1(AsyncOperationProcessor.java:37)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[23:51:51,531] [ERROR] GameMsgEncoder.write --> UserLoginResult

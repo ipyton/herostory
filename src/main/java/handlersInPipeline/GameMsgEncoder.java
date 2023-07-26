@@ -9,6 +9,7 @@ import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 import message.GameMsgProtocol;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.GameMessageRecognizer;
 
 public class GameMsgEncoder extends ChannelOutboundHandlerAdapter {
     static private final Logger LOGGER = LoggerFactory.getLogger(GameMsgEncoder.class);
@@ -26,14 +27,10 @@ public class GameMsgEncoder extends ChannelOutboundHandlerAdapter {
                 return;
             }
 
-            int msgCode = -1;
+            int msgCode = GameMessageRecognizer.getMsgCodeByClazz(msg.getClass());
 
-            if (msg instanceof GameMsgProtocol.UserEntryResult) {
-                msgCode = GameMsgProtocol.MsgCode.USER_ENTRY_CMD_VALUE;
-            } else if (msg instanceof GameMsgProtocol.WhoElseIsHereResult) {
-                msgCode = GameMsgProtocol.MsgCode.WHO_ELSE_IS_HERE_RESULT_VALUE;
-            } else {
-                LOGGER.error(msg.getClass().getSimpleName());
+            if (-1 == msgCode) {
+                LOGGER.error("can not get the right message" + msg.getClass().getSimpleName());
                 super.write(ctx, msg, promise);
                 return;
             }

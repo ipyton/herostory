@@ -20,13 +20,15 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
         if (null == ctx) {
             return;
         }
-
+        System.out.println("has connected!!!!");
         try {
             super.channelActive(ctx);
             BroadCaster.addChannel(ctx.channel());
         } catch (Exception ex) {
             LOGGER.error(ex.getMessage(), ex);
         }
+
+
     }
 
     @Override
@@ -67,6 +69,8 @@ public class GameMsgHandler extends SimpleChannelInboundHandler<Object> {
 //        } catch (Exception ex) {
 //            LOGGER.error(ex.getMessage(), ex);
 //        }
+        System.out.println(ctx);
+        System.out.println("------------");
         MainThreadProcessor.getInstance().process(ctx, msg);
     }
     // the first T stands for type of T, the second T means return T

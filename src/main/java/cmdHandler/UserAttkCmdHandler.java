@@ -18,7 +18,7 @@ public class UserAttkCmdHandler implements ICmdHandler<GameMsgProtocol.UserAttkC
     public void handle(ChannelHandlerContext ctx, GameMsgProtocol.UserAttkCmd cmd) {
         if (null == ctx || null == cmd) return;
 
-        Integer attkUserID = (Integer) ctx.channel().attr(AttributeKey.valueOf("userID")).get();
+        Integer attkUserID = (Integer) ctx.channel().attr(AttributeKey.valueOf("userId")).get();
 
         if (null == attkUserID) return;
 

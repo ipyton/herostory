@@ -3,9 +3,8 @@ package loginService;
 import async.AsyncOperationProcessor;
 import async.IAsyncOperation;
 import com.alibaba.fastjson.JSONObject;
-import com.mysql.cj.log.Log;
 import loginService.DB.AccountInformation;
-import loginService.DB.IUserDAO;
+import loginService.DB.IUserDao;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +52,7 @@ public class AsyncLoginService {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("userName", information.userName);
             jsonObject.put("heroAvatar", information.heroAvatar);
-            redis.hset("User_" + information.userID, "BasicInfo", jsonObject.toJSONString());
+            redis.hset("User_" + information.userId, "BasicInfo", jsonObject.toJSONString());
         } catch (Exception ex) {
             LOGGER.error(ex.getMessage(), ex);
         }
@@ -88,7 +87,7 @@ public class AsyncLoginService {
         @Override
         public void doAsync() {
             try (SqlSession mySqlSession = MySQLFactory.openSession()) {
-                IUserDAO dao = mySqlSession.getMapper(IUserDAO.class);
+                IUserDao dao = mySqlSession.getMapper(IUserDao.class);
                 AccountInformation information = dao.getByUserName(_userName);
 
                 if (null != information) {
